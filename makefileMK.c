@@ -4,9 +4,9 @@
 // To use it:
 // 1st) cd to the directory where the source files of your project are (make sure that there are no other random .c files in this directory)
 // 2nd) compile the sourcefile with any name you want (i will use maker from here on)
-// 3rd) type: ls *c|./maker myprog (<-name of your final executable)
+// 3rd) type: ls *c|./maker myprog (<-myprog==name of your final executable) // takes only 1 parameter
 // 4rth) Makefile ready!!
-// Usefull advice! Consider making it an alias in your system to make it super easy to use to use
+// Usefull advice! Consider making it an alias in your system to make it super easy to use
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -19,8 +19,8 @@
 #define MAXFILES 15
 
 //char array memory managment functions
-char **tballoc(char n, char n1, char init); // allocates n x n1 array of chars, initialized as init | returns the table pointer in succes and NULL at error
-void tbfree(char **table, char n);			// frees a table n x anything table
+char **tballoc(char n, char n1, char init); 	// allocates n x n1 array of chars, initialized as init | returns the table pointer in succes and NULL at error
+void tbfree(char **table, char n);		// frees a table n x anything table
 void strExtClean(char *str, char *trg);		// takes the input from ls in .c and removes the extention (the .c)
 
 
@@ -72,9 +72,9 @@ int main(int argc, char **argv){
 			return 1;
 		}
 	}
-	fprintf(makefile, "\n");
-
-	fprintf(makefile, "\t$(CC) $(CFLAGS) -o %s", argv[1]);
+	
+	fprintf(makefile, "\n\t$(CC) $(CFLAGS) -o %s", argv[1]);
+	
 	for(i=0; i<count; i++){
 		fprintf(makefile, " %s.o", files[i]);
 	}
