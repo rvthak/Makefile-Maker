@@ -38,18 +38,13 @@ int main(int argc, char **argv){
 		return 1;
 	}
 
-	if( (str=malloc(25*sizeof(char)) )==NULL ){
-		fprintf(stderr, "Fatal memory error\n");
-		return 1;
-	}
-
-	if( (files=tballoc(MAXFILES, 25, 0))==NULL ){
-		fprintf(stderr, "Fatal memory error\n");
+	if( (str=malloc(25*sizeof(char)))==NULL || (files=tballoc(MAXFILES, 25, 0))==NULL ){
+		fprintf(stderr, "Fatal error: failed to allocate memory\n");
 		return 1;
 	}
 
 	if( (makefile=fopen("makefile", "w"))==NULL ){
-		fprintf(stderr, "Fatal file error\n");
+		fprintf(stderr, "Fatal error: failed to open file\n");
 		return 1;
 	}
 
