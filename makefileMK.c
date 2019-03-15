@@ -132,5 +132,3 @@ void strExtClean(char *str, char* trg){
 	}
 	return;
 }
-
-
