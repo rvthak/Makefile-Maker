@@ -1,9 +1,9 @@
 CC=gcc
 CFLAGS= 
 
-all: myprog
+all: maker
 
-myprog: makefileMK.o
+maker: makefileMK.o
 	$(CC) $(CFLAGS) -o myprog makefileMK.o
 
 makefileMK.o: makefileMK.c
