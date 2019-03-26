@@ -2,7 +2,7 @@
 A small simple program that creates makefiles automatically 
 
 How to use:
-1) compile the source file makefileMK.c with gcc -o maker makefile.c
+1) compile the source file makefileMK.c with gcc -o maker makefileMK.c
 2) run the program with ./maker myprog (myprog=your programs desired name)
 3) write down all the names of the .c files of your project that you would like to add to your makefile
 WITH .c in the end, for example  test.c 
