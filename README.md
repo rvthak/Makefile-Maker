@@ -8,6 +8,7 @@ How to use:
 3) Run the program with: ./maker myprog (myprog=your desired program's final executable name)
 5) Your makefile should be ready! Test with command: make
 6) Whenever you need clean up with: make clean
+7) If you are having problems understanding the previous steps download and watch the tutorial.mp4 video
 
 Notes:
 1) The program takes one parameter only (the wanted name for the final executable)
