@@ -1,4 +1,5 @@
-# Makefile-Maker // created 13/03/2019 - last updated 29/03/2019
+# Makefile-Maker 
+// Created 13/03/2019 - Last updated 29/03/2019
 A small simple program that creates makefiles automatically 
 
 How to use:
