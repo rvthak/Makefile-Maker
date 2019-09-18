@@ -3,7 +3,7 @@
 
 // Started working on a new version, update coming soon
 
-A small simple program that creates makefiles automatically 
+A small simple program that creates simple makefiles automatically 
 
 How to use:
 1) Compile the object file makefileMKv0_2.o with: gcc -o maker makefileMKv0_2.o
