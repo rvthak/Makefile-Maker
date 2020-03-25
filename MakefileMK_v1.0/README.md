@@ -3,7 +3,7 @@
 1) Rewrite the program in c++
 2) Change the final executable name to mfmk for simplicity
 3) Turn the final release into a .deb package to make installation easier
-+ make the program executable from any directory
+and make the program executable from any directory
 4) Add a select all files choice
 5) Store the "makefile template text" in a file and get the needed strings 
 using functions for better upgradeability (or think of a cleaner way)
