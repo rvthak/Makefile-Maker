@@ -1,7 +1,7 @@
 # Makefile-Maker 
-// Created 13/03/2019 - Updated to Version 2 at 29/03/2019
+// Created 13/03/2019 - Updated to Version 0.2 at 29/03/2019
 
-// Started working on a new version, update coming soon
+// Started working on a new version 1.0, update coming
 
 A small simple program that creates simple makefiles automatically 
 
