@@ -1,4 +1,4 @@
-> Dev list:
++ Dev list:
 
 1) Rewrite the program in c++
 2) Change the final executable name to mfmk for simplicity
@@ -20,7 +20,7 @@ and be able to get the files it needs ( deside exactly the cases +
 "formats/structures" that can be used) ?
 
 
-> Parameters:
++ Parameters:
 
    Parameter | Correct input format |  Parameter type  | Default value 
 1)    -n     |       -n name        |      string      |     a.out
@@ -34,7 +34,7 @@ and be able to get the files it needs ( deside exactly the cases +
 9)    -org   |       -org           |      boolean     |     false
 
 
-> Parameter description and functionality:
++ Parameter description and functionality:
 1) (-n)		Set the name of the final executable 
 2) (-f)		Set the format of the targeted source files
 3) (-hf)	Set the format of the targeted header files
