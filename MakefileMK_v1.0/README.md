@@ -25,7 +25,7 @@ and be able to get the files it needs ( deside exactly the cases +
    Parameter | Correct input format |  Parameter type  | Default value 
 1)    -n     |       -n name        |      string      |     a.out
 2)    -f     |       -f cpp         |      string      |      cpp
-3)    -hf    |       -hf h          |      string      |      hpp
+3)    -h     |       -h  h          |      string      |      hpp
 4)    -c     |       -c g++         |      string      |      g++
 5)    -db    |       -db            |      boolean     |     false
 6)    -vg    |       -vg            |      boolean     |     false
@@ -37,7 +37,7 @@ and be able to get the files it needs ( deside exactly the cases +
 + Parameter description and functionality:
 1) (-n)		Set the name of the final executable 
 2) (-f)		Set the format of the targeted source files
-3) (-hf)	Set the format of the targeted header files
+3) (-h)     Set the format of the targeted header files
 4) (-c)		Set the compiler of choice
 5) (-db)	Enable debugging on the final makefile
 6) (-vg)	Enable valgrind on the final makefile
