@@ -1,9 +1,9 @@
 # Makefile-Maker 
 A small simple program that creates simple makefiles automatically
 
-+ Created 0.1 13/03/2019
-+ Version 0.2 29/03/2019
-+ Version 1.0 16/05/2020
++ Created  v0.1 13/03/2019
++ Updated  v0.2 29/03/2019
++ Upgraded v1.0 16/05/2020
 
 Known bug/issues
 1) If the program is Terminated with ctrl + C during file selection phase it leaves behind 
