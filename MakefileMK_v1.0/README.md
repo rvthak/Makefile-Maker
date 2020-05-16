@@ -9,6 +9,7 @@ installed in the system
 if the user wants to edit the existing one or make a new one ( add the ability 
 to parse an already existing makefile)
 5) Implement "-org"
+6) Add --help argument
 
 + Parameters:
 
