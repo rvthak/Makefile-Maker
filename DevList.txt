@@ -10,39 +10,3 @@ installed in the system
 if the user wants to edit the existing one or make a new one ( add the ability 
 to parse an already existing makefile)
 5) Implement "-org"
-
-+ Parameters:
-
-   Parameter | Correct input format |  Parameter type  | Default value 
-1)    -n     |       -n name        |      string      |     a.out
-2)    -f     |       -f cpp         |      string      |      cpp
-3)    -h     |       -h hpp         |      string      |      hpp
-4)    -c     |       -c g++         |      string      |      g++
-5)    -db    |       -db            |      boolean     |     false
-6)    -vg    |       -vg            |      boolean     |     false
-7)    -p     |       -p             |      boolean     |     false
-8)    -e     |       -e             |      boolean     |     false
-9)    -org   |       -org           |      boolean     |     false
-10)   --help |       --help
-
-
-+ Parameter description and functionality:
-1) (-n)		Set the name of the final executable 
-2) (-f)		Set the format of the targeted source files
-3) (-h)     Set the format of the targeted header files
-4) (-c)		Set the compiler of choice
-5) (-db) 	Enable debugging on the final makefile
-6) (-vg)	   Enable valgrind on the final makefile
-7) (-p)		Enables compiler parameter mode. The program will later ask the user to
-type-in any needed parameters 
-8) (-e)		Enables execution parameter mode. The program will later ask the user to
-type-in any needed parameters
-9) (-org)	The system will organise all selected files in folders
-source files in ./source, header files in ./include and object files
-in ./bin ( final executable + makefile will stay in the parent directory)
-(! -org NOT yet implemented !)
-10) ( --help)  Terminates Program and Prints Help
-
-! Disclaimer ! To mess with the parameters, some basic programming knowledge is 
-advised. This program was developed for pesonal use, so if configured 
-incorrectly it will not work.
