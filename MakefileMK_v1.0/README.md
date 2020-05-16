@@ -9,7 +9,6 @@ installed in the system
 if the user wants to edit the existing one or make a new one ( add the ability 
 to parse an already existing makefile)
 5) Implement "-org"
-6) Add --help argument
 
 + Parameters:
 
@@ -23,6 +22,7 @@ to parse an already existing makefile)
 7)    -p     |       -p             |      boolean     |     false
 8)    -e     |       -e             |      boolean     |     false
 9)    -org   |       -org           |      boolean     |     false
+10)   --help |       --help
 
 
 + Parameter description and functionality:
@@ -40,6 +40,7 @@ type-in any needed parameters
 source files in ./source, header files in ./include and object files
 in ./bin ( final executable + makefile will stay in the parent directory)
 (! -org NOT yet implemented !)
+10) ( --help)  Terminates Program and Prints Help
 
 ! Disclaimer ! To mess with the parameters, some basic programming knowledge is 
 advised. This program was developed for pesonal use, so if configured 
