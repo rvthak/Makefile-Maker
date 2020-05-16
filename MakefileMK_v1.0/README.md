@@ -1,24 +1,14 @@
 + Dev list:
 
-1) Rewrite the program in c++
-2) Change the final executable name to mfmk for simplicity
-3) Turn the final release into a .deb package to make installation easier
-and make the program executable from any directory
-4) Add a select all files choice
-5) Store the "makefile template text" in a file and get the needed strings 
-using functions for better upgradeability (or think of a cleaner way)
-6) When the program runs always check if make + the selected compiler are
+1) Change the final executable name to mfmk for simplicity
+2) Turn the final release into a .deb package to make installation easier
+and make the program executable from any directory if possible
+3) When the program runs always check if make + the selected compiler are
 installed in the system
-7) If a makefile already exists on the current directory, the program will ask
+4) If a makefile already exists on the current directory, the program will ask
 if the user wants to edit the existing one or make a new one ( add the ability 
 to parse an already existing makefile)
-8) In case user gives only one parameter (not a flag) it is considered the 
-(-n) name
-9) Make it built a whole directory list with subdirs with lists...
-to model the whole filesystem structure below the targeted directory
-and be able to get the files it needs ( deside exactly the cases + 
-"formats/structures" that can be used) ?
-
+5) Implement "-org"
 
 + Parameters:
 
@@ -39,8 +29,8 @@ and be able to get the files it needs ( deside exactly the cases +
 2) (-f)		Set the format of the targeted source files
 3) (-h)     Set the format of the targeted header files
 4) (-c)		Set the compiler of choice
-5) (-db)	Enable debugging on the final makefile
-6) (-vg)	Enable valgrind on the final makefile
+5) (-db) 	Enable debugging on the final makefile
+6) (-vg)	   Enable valgrind on the final makefile
 7) (-p)		Enables compiler parameter mode. The program will later ask the user to
 type-in any needed parameters 
 8) (-e)		Enables execution parameter mode. The program will later ask the user to
@@ -48,7 +38,7 @@ type-in any needed parameters
 9) (-org)	The system will organise all selected files in folders
 source files in ./source, header files in ./include and object files
 in ./bin ( final executable + makefile will stay in the parent directory)
-
+(! -org NOT yet implemented !)
 
 ! Disclaimer ! To mess with the parameters, some basic programming knowledge is 
 advised. This program was developed for pesonal use, so if configured 
