@@ -1,15 +1,27 @@
-#include "input.hpp"
 #include <string>
 #include <limits>
-#include <iostream>
 #include <fstream>
+#include <iostream>
+#include "input.hpp"
 
 using namespace std;
 
-int HandleParameter(int &count, int &argc, char const **argv, Makefile &mk);
-void printInputFormat(void);
-bool getDesision(const string msg);
-void changeFormat(string &str, const string frm);
+// Supported Arguments
+#define NAME_A "-n"
+#define FRMT_A "-f"
+#define HEAD_A "-h"
+#define COMP_A "-c"
+#define DEBG_A "-db"
+#define VALG_A "-vg"
+#define PARM_A "-p"
+#define EXEC_A "-e"
+#define ORGN_A "-org"
+
+// Support Functions - Keep them local
+int HandleParameter(int &count, int &argc, char const **argv, Makefile &mk); // Gets a parameter and updates the Makefile (Used only from InputManager())
+void changeFormat(string &str, const string frm); // Change the str String file format to frm
+bool getDesision(const string msg); // Print the msg question and return a binary answer
+
 
 void InputManager(int argc, char const **argv, Makefile &mk){
 
@@ -33,10 +45,12 @@ void InputManager(int argc, char const **argv, Makefile &mk){
 		if( HandleParameter(count, argc, argv, mk)!=0 ){ exit(1); }
 	}
 
+	// Compilation Parameter read mode
 	if(mk.getCompParam()){
 		mk.readCompParam();
 	}
 
+	// Execution Parameter read mode
 	if(mk.getExecParam()){
 		mk.readExecParam();
 	}
@@ -53,7 +67,7 @@ int HandleParameter(int &count, int &argc, char const **argv, Makefile &mk){
 		return 1;
 	}
 
-	if(!param.compare("-n")){
+	if(!param.compare(NAME_A)){
 		if( count == argc || argv[count+1][0]=='-' ){
 			cout << " \n(!) User Input Error: name missing. Exiting..." << endl;
 			printInputFormat();
@@ -63,7 +77,7 @@ int HandleParameter(int &count, int &argc, char const **argv, Makefile &mk){
 		mk.setName(tmp);
 		count+=2;
 	}
-	else if(!param.compare("-f")){
+	else if(!param.compare(FRMT_A)){
 		if( count == argc || argv[count+1][0]=='-'){
 			cout << " \n(!) User Input Error: source format missing. Exiting..." << endl;
 			printInputFormat();
@@ -73,7 +87,7 @@ int HandleParameter(int &count, int &argc, char const **argv, Makefile &mk){
 		mk.setFormat(tmp);
 		count+=2;
 	}
-	else if(!param.compare("-h")){
+	else if(!param.compare(HEAD_A)){
 		if( count == argc || argv[count+1][0]=='-'){
 			cout << " \n(!) User Input Error: header format missing. Exiting..." << endl;
 			printInputFormat();
@@ -83,7 +97,7 @@ int HandleParameter(int &count, int &argc, char const **argv, Makefile &mk){
 		mk.setHeader(tmp);
 		count+=2;
 	}
-	else if(!param.compare("-c")){
+	else if(!param.compare(COMP_A)){
 		if( count == argc || argv[count+1][0]=='-'){
 			cout << " \n(!) User Input Error: compiler missing. Exiting..." << endl;
 			printInputFormat();
@@ -93,7 +107,7 @@ int HandleParameter(int &count, int &argc, char const **argv, Makefile &mk){
 		mk.setCompiler(tmp);
 		count+=2;
 	}
-	else if(!param.compare("-db")){
+	else if(!param.compare(DEBG_A)){
 		if(mk.getDebug()){
 			mk.setDebug(0);
 		}
@@ -102,7 +116,7 @@ int HandleParameter(int &count, int &argc, char const **argv, Makefile &mk){
 		}
 		count++;
 	}
-	else if(!param.compare("-vg")){
+	else if(!param.compare(VALG_A)){
 		if(mk.getValgrind()){
 			mk.setValgrind(0);
 		}
@@ -111,7 +125,7 @@ int HandleParameter(int &count, int &argc, char const **argv, Makefile &mk){
 		}
 		count++;
 	}
-	else if(!param.compare("-p")){
+	else if(!param.compare(PARM_A)){
 		if(mk.getCompParam()){
 			mk.setCompParam(0);
 		}
@@ -120,7 +134,7 @@ int HandleParameter(int &count, int &argc, char const **argv, Makefile &mk){
 		}
 		count++;
 	}
-	else if(!param.compare("-e")){
+	else if(!param.compare(EXEC_A)){
 		if(mk.getExecParam()){
 			mk.setExecParam(0);
 		}
@@ -129,7 +143,7 @@ int HandleParameter(int &count, int &argc, char const **argv, Makefile &mk){
 		}
 		count++;
 	}
-	else if(!param.compare("-org")){
+	else if(!param.compare(ORGN_A)){
 		if(mk.getOrganize()){
 			mk.setOrganize(0);
 		}
@@ -208,8 +222,8 @@ void SystemInput(Makefile &mk){
 		}
 	}
 	else{
+		// Let the user choose files one by one (maybe implement a toggle mode where you choose by numbers)
 		cout << " (i) Select the ones to add: " << endl;
-
 		file >> tmp;
 		while(!file.eof()){
 			cout << tmp;
@@ -225,6 +239,7 @@ void SystemInput(Makefile &mk){
 	//cout << " (i) Buf: " << buf << endl;
 	mk.setFileList(buf);
 
+	// Close and delete the tmp file
 	file.close();
 	system("rm -f mkfl.tmp");
 	return;

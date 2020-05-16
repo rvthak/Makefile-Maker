@@ -1,14 +1,18 @@
-#include "output.hpp"
-#include <iostream>
 #include <fstream>
+#include <iostream>
+#include "output.hpp"
+
 using namespace std;
 
-string mkflBody(void);
-string mkflDB(void);
-string mkflVal(bool dbflag);
-string mkflClean(void);
+// Support Functions - Keep them local
+// They add the corresponding text to the makefile
+string mkflBody(void);			// Adds main body
+string mkflDB(void);			// Adds gdb
+string mkflVal(bool dbflag);	// Adds valgrind
+string mkflClean(void);			// Adds Clean
 
 void Output(Makefile &mk){
+	// Safely Create the output file
 	ofstream file;
 	file.open("makefile");
 	if(!file.is_open()){
@@ -16,6 +20,7 @@ void Output(Makefile &mk){
 		exit(1);
 	}
 
+	// Write the Makefile info 
 	file << "OUT=" << mk.getName() << endl;
 	file << "OBJS=" << mk.getFileList() << endl;
 	file << "CC=" << mk.getCompiler() << endl;
@@ -26,7 +31,7 @@ void Output(Makefile &mk){
 		file << "EXECUTION_PARAMETERS=" << mk.getExecParamList() << endl;
 	}
 	
-
+	// Write Body + any other part
 	file << mkflBody();
 
 	if(mk.getDebug()){
