@@ -174,6 +174,7 @@ void printInputFormat(void){
 	printf(" >> Toggle compilation parameters:  -p   (0)\n");
 	printf(" >> Toggle execution parameters:    -e   (0)\n");
 	printf(" >> Toggle auto project organizer:  -org (0)\n");
+	printf(" >> Print help:                     --help\n");
 	
 	printf("\n (i)> The <...> fields are REQUIRED right after their corresponding parameter\n");
 	printf(" (i)> Rogue Strings and Non-Supported parameters will cause termination\n");
