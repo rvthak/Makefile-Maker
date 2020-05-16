@@ -1,5 +1,6 @@
 + Dev list:
 
+! make sure the final makefile actually works
 1) Change the final executable name to mfmk for simplicity
 2) Turn the final release into a .deb package to make installation easier
 and make the program executable from any directory if possible
