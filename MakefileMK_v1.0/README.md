@@ -25,12 +25,12 @@ and be able to get the files it needs ( deside exactly the cases +
    Parameter | Correct input format |  Parameter type  | Default value 
 1)    -n     |       -n name        |      string      |     a.out
 2)    -f     |       -f cpp         |      string      |      cpp
-3)    -h     |       -h  h          |      string      |      hpp
+3)    -h     |       -h hpp         |      string      |      hpp
 4)    -c     |       -c g++         |      string      |      g++
 5)    -db    |       -db            |      boolean     |     false
 6)    -vg    |       -vg            |      boolean     |     false
-7)    -dir   |       -dir           |      boolean     |     false
-8)    -p     |       -p             |      boolean     |     false
+7)    -p     |       -p             |      boolean     |     false
+8)    -e     |       -e             |      boolean     |     false
 9)    -org   |       -org           |      boolean     |     false
 
 
@@ -41,14 +41,15 @@ and be able to get the files it needs ( deside exactly the cases +
 4) (-c)		Set the compiler of choice
 5) (-db)	Enable debugging on the final makefile
 6) (-vg)	Enable valgrind on the final makefile
-7) (-dir)	The program will also search sub-directories for files
-8) (-p)		Enables parameter mode. The program will later ask the user to
+7) (-p)		Enables compiler parameter mode. The program will later ask the user to
 type-in any needed parameters 
+8) (-e)		Enables execution parameter mode. The program will later ask the user to
+type-in any needed parameters
 9) (-org)	The system will organise all selected files in folders
 source files in ./source, header files in ./include and object files
 in ./bin ( final executable + makefile will stay in the parent directory)
 
 
-! Disclaimer ! To mess with the parameters, some basic c/c++ knowledge is 
+! Disclaimer ! To mess with the parameters, some basic programming knowledge is 
 advised. This program was developed for pesonal use, so if configured 
 incorrectly it will not work.
