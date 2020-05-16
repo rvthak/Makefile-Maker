@@ -23,9 +23,9 @@ void Output(Makefile &mk){
 	// Write the Makefile info 
 	file << "OUT=" << mk.getName() << endl;
 	file << "OBJS=" << mk.getFileList() << endl;
-	file << "CC=" << mk.getCompiler() << endl;
+	file << "CXX=" << mk.getCompiler() << endl;
 	if(mk.getCompParam()){
-		file << "COMPILATION_PARAMETERS=" << mk.getCompParamList() << endl;
+		file << "CXXFLAGS=" << mk.getCompParamList() << endl;
 	}
 	if(mk.getExecParam()){
 		file << "EXECUTION_PARAMETERS=" << mk.getExecParamList() << endl;
@@ -52,9 +52,9 @@ string mkflBody(void){
 	string buf;
 	buf+="\nall: $(OUT)\n\n";
 	buf+="$(OUT): $(OBJS)\n";
-	buf+="\t$(CC) $(COMPILATION_PARAMETERS) -o $(OUT) $(OBJS)\n\n";
+	buf+="\t$(CXX) -o $(OUT) $(OBJS)\n\n";
 	buf+="%.o: %.c\n";
-	buf+="\t$(CC) -c -o $@ $< $(COMPILATION_PARAMETERS)\n\n";
+	buf+="\t$(CXX) -c -o $@ $<\n\n";
 	buf+="run: $(OUT)\n";
 	buf+="\t./$(OUT) $(EXECUTION_PARAMETERS)\n\n";
 	return buf;
@@ -63,7 +63,7 @@ string mkflBody(void){
 string mkflDB(void){
 	string buf;
 	buf+="db: clean param\n";
-	buf+="param: COMPILATION_PARAMETERS += -g\n";
+	buf+="param: CXXFLAGS += -g\n";
 	buf+="param: $(OUT)\n\n";
 	buf+="gdb: db\n";
 	buf+="\tgdb $(OUT)\n\n";
@@ -75,7 +75,7 @@ string mkflVal(bool dbflag){
 
 	if(!dbflag){
 		buf+="db: clean param\n";
-		buf+="param: COMPILATION_PARAMETERS += -g\n";
+		buf+="param: CXXFLAGS += -g\n";
 		buf+="param: $(OUT)\n\n";
 	}
 	
