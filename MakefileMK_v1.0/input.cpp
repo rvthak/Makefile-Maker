@@ -16,20 +16,21 @@ using namespace std;
 #define PARM_A "-p"
 #define EXEC_A "-e"
 #define ORGN_A "-org"
+#define HELP_A "--help"
 
 // Support Functions - Keep them local
 int HandleParameter(int &count, int &argc, char const **argv, Makefile &mk); // Gets a parameter and updates the Makefile (Used only from InputManager())
-void changeFormat(string &str, const string frm); // Change the str String file format to frm
-bool getDesision(const string msg); // Print the msg question and return a binary answer
+void changeFormat(string &str, const string frm); 	// Change the str String file format to frm
+bool getDesision(const string msg); 				// Print the msg question and return a binary answer
 
 
 void InputManager(int argc, char const **argv, Makefile &mk){
 
-	if(argc==1){ // No parameters
-		printf(" (i) > No arguments given using defaults..\n");
-		return;
-	}
-	else if(argc==2){ // Only one parameter => use it as a name
+	// No parameters
+	if(argc==1){ printf(" (i) > No arguments given using defaults..\n"); return; }
+	
+	// Only one parameter => use it as a name
+	else if(argc==2){ 
 		if( argv[1][0]!='-' ){
 			printf(" (i) > Only one argument given. Using '%s' as a Name\n", argv[1]);
 			mk.setName(argv[1]);
@@ -42,18 +43,15 @@ void InputManager(int argc, char const **argv, Makefile &mk){
 	argc=argc-1; // Use argc as a total counter
 
 	while(count<=argc){
-		if( HandleParameter(count, argc, argv, mk)!=0 ){ exit(1); }
+		// HandleParameter changes count for ease
+		if( HandleParameter(count, argc, argv, mk)!=0 ){ exit(1); } 
 	}
 
 	// Compilation Parameter read mode
-	if(mk.getCompParam()){
-		mk.readCompParam();
-	}
+	if(mk.getCompParam()){ mk.readCompParam(); }
 
 	// Execution Parameter read mode
-	if(mk.getExecParam()){
-		mk.readExecParam();
-	}
+	if(mk.getExecParam()){ mk.readExecParam(); }
 
 	return;
 }
@@ -67,7 +65,11 @@ int HandleParameter(int &count, int &argc, char const **argv, Makefile &mk){
 		return 1;
 	}
 
-	if(!param.compare(NAME_A)){
+	if(!param.compare(HELP_A)){
+		printInputFormat();
+		return 1;
+	}
+	else if(!param.compare(NAME_A)){
 		if( count == argc || argv[count+1][0]=='-' ){
 			cout << " \n(!) User Input Error: name missing. Exiting..." << endl;
 			printInputFormat();

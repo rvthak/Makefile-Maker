@@ -5,6 +5,6 @@
 
 void InputManager(int argc, char const **argv, Makefile &mk);
 void SystemInput(Makefile &mk);
-void printInputFormat(void); // --help (TODO)
+void printInputFormat(void); // --help
 
 #endif
