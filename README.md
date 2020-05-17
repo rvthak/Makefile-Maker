@@ -9,8 +9,8 @@ Argument  | Correct input format |   Argument Meaning    |  Argument type  | Def
    -f     |       -f cpp         |  Source files format  |     string      |      cpp
    -h     |       -h hpp         |  Header files format  |     string      |      hpp
    -c     |       -c g++         |       Compiler        |     string      |      g++
-   -db    |       -db            |      gdb toggle       |     string      |     false
-   -vg    |       -vg            |    valgrind toggle    |     string      |     false
+   -db    |       -db            |      gdb toggle       |     string      |     true
+   -vg    |       -vg            |    valgrind toggle    |     string      |     true
    -p     |       -p             |  Compilation argument toggle|     string      |     false
    -e     |       -e             |   Execution argument  toggle|     string      |     false
    --help |       --help         |    Print Help
