@@ -2,6 +2,7 @@
 #include <limits>
 #include <fstream>
 #include <iostream>
+#include <stdlib.h>
 #include "input.hpp"
 
 using namespace std;

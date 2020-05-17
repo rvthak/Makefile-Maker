@@ -1,20 +1,28 @@
-OUT=alpha
+OUT=mkfl
 OBJS=input.o main.o makefileS.o output.o 
-CC=g++
+CXX=g++
+CXXFLAGS=
+EXECUTION_PARAMETERS=
 
 all: $(OUT)
 
 $(OUT): $(OBJS)
-	$(CC) $(COMPILATION_PARAMETERS) -o $(OUT) $(OBJS)
+	$(CXX) -o $(OUT) $(OBJS)
 
 %.o: %.c
-	$(CC) -c -o $@ $< $(COMPILATION_PARAMETERS)
+	$(CXX) -c -o $@ $<
 
 run: $(OUT)
 	./$(OUT) $(EXECUTION_PARAMETERS)
 
+
+install: $(OUT)
+	sudo cp $(OUT) /usr/local/bin
+	@echo Program Installed in /usr/local/bin
+	@echo You can now delete this folder safely
+
 db: clean param
-param: COMPILATION_PARAMETERS += -g
+param: CXXFLAGS += -g
 param: $(OUT)
 
 gdb: db

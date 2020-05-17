@@ -1,5 +1,6 @@
 #include <fstream>
 #include <iostream>
+#include <stdlib.h>
 #include "output.hpp"
 
 using namespace std;
@@ -7,6 +8,7 @@ using namespace std;
 // Support Functions - Keep them local
 // They add the corresponding text to the makefile
 string mkflBody(void);			// Adds main body
+string mkflInst(void);			// Adds install segment
 string mkflDB(void);			// Adds gdb
 string mkflVal(bool dbflag);	// Adds valgrind
 string mkflClean(void);			// Adds Clean
@@ -24,15 +26,25 @@ void Output(Makefile &mk){
 	file << "OUT=" << mk.getName() << endl;
 	file << "OBJS=" << mk.getFileList() << endl;
 	file << "CXX=" << mk.getCompiler() << endl;
+
 	if(mk.getCompParam()){
 		file << "CXXFLAGS=" << mk.getCompParamList() << endl;
 	}
+	else{
+		file << "CXXFLAGS=" << endl;
+	}
+
 	if(mk.getExecParam()){
 		file << "EXECUTION_PARAMETERS=" << mk.getExecParamList() << endl;
+	}
+	else{
+		file << "EXECUTION_PARAMETERS=" << endl;
 	}
 	
 	// Write Body + any other part
 	file << mkflBody();
+
+	file << mkflInst();
 
 	if(mk.getDebug()){
 		file << mkflDB();
@@ -57,6 +69,15 @@ string mkflBody(void){
 	buf+="\t$(CXX) -c -o $@ $<\n\n";
 	buf+="run: $(OUT)\n";
 	buf+="\t./$(OUT) $(EXECUTION_PARAMETERS)\n\n";
+	return buf;
+}
+
+string mkflInst(void){
+	string buf;
+	buf+="\ninstall: $(OUT)\n";
+	buf+="\tsudo cp $(OUT) /usr/local/bin\n";
+	buf+="\t@echo Program Installed in /usr/local/bin\n";
+	buf+="\t@echo You can now delete this folder safely\n\n";
 	return buf;
 }
 
