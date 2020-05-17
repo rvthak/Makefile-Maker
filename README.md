@@ -43,9 +43,6 @@ in ./bin ( final executable + makefile will stay in the parent directory)
 advised. This program was developed for pesonal use, so if configured 
 incorrectly it will not work.
 
-+ Dev list:
-1) Add -i toggle argument to enable/disable make install option
-
 + Ideas/Features to add if i ever need them:
 1) If a makefile already exists on the current directory, the program will ask
 if the user wants to edit the existing one or make a new one ( add the ability 
@@ -53,6 +50,7 @@ to parse an already existing makefile)
 2) Implement "-org"
 3) When the program runs always check if make + the selected compiler are
 installed in the system
+4) Add -i toggle argument to enable/disable make install option
 
 + Created  v0.1 13/03/2019
 + Updated  v0.2 29/03/2019
