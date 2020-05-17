@@ -3,17 +3,18 @@ A small simple program that creates simple makefiles automatically
 
 + Parameters:
 
-   Parameter | Correct input format |  Parameter type  | Default value 
-1)    -n     |       -n name        |      string      |     a.out
-2)    -f     |       -f cpp         |      string      |      cpp
-3)    -h     |       -h hpp         |      string      |      hpp
-4)    -c     |       -c g++         |      string      |      g++
-5)    -db    |       -db            |      boolean     |     false
-6)    -vg    |       -vg            |      boolean     |     false
-7)    -p     |       -p             |      boolean     |     false
-8)    -e     |       -e             |      boolean     |     false
-9)    -org   |       -org           |      boolean     |     false (! -org NOT yet implemented !)
-10)   --help |       --help
+Parameter | Correct input format |  Parameter type  | Default value 
+----------|----------------------|------------------|---------------
+   -n     |       -n name        |      string      |     a.out
+   -f     |       -f cpp         |      string      |      cpp
+   -h     |       -h hpp         |      string      |      hpp
+   -c     |       -c g++         |      string      |      g++
+   -db    |       -db            |      boolean     |     false
+   -vg    |       -vg            |      boolean     |     false
+   -p     |       -p             |      boolean     |     false
+   -e     |       -e             |      boolean     |     false
+   -org   |       -org           |      boolean     |     false (! -org NOT yet implemented !)
+   --help |       --help
 
 + Installation:
 1) Download zip and unzip or git clone
