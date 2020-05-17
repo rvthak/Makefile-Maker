@@ -26,7 +26,7 @@ Argument  | Correct input format |  Parameter type  | Default value
     git clone https://github.com/rvthak/Makefile-Maker.git
     cd Makefile-Maker
     make install
-    (program installation asks for your password and finishes)
+    #(program installation asks for your password and finishes)
     cd ..
     rm -rf Makefile-Maker/^C
 
