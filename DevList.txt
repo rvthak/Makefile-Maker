@@ -1,11 +1,1 @@
-+ Dev list:
 
-1) Change the final executable name to mfmk for simplicity
-2) Turn the final release into a .deb package to make installation easier
-and make the program executable from any directory if possible
-3) When the program runs always check if make + the selected compiler are
-installed in the system
-4) If a makefile already exists on the current directory, the program will ask
-if the user wants to edit the existing one or make a new one ( add the ability 
-to parse an already existing makefile)
-5) Implement "-org"
