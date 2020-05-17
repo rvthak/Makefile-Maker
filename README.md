@@ -15,10 +15,10 @@ Argument  | Correct input format |  Parameter type  | Default value
    -e     |       -e             |      boolean     |     false
    --help |       --help
 
-## Installation:
+## Installation: (you will need terminal)
 1) Download zip and unzip or git clone
-2) In Terminal: cd into the project directory
-3) In Terminal: make install
+2) cd into the project directory
+3) make install
 4) You will be asked your admin privileges password to complete the installation
 5) Delete the downloaded folder
 
