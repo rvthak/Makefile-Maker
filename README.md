@@ -44,7 +44,7 @@ type-in any needed parameters
 9) __(-org)__	The system will organise all selected files in folders
 source files in ./source, header files in ./include and object files
 in ./bin ( final executable + makefile will stay in the parent directory)
-(! -org NOT yet implemented !)
+**(! -org NOT yet implemented !)**
 10) __( --help)__  Terminates Program and Prints Help
 
 ! __Important Note__ ! To mess with the parameters, some basic programming knowledge is 
