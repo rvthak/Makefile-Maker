@@ -42,8 +42,7 @@ incorrectly it will not work.
 2) Turn the final release into a .deb package to make installation easier
 and make the program executable from any directory if possible
 
-+ Ideas/Features to add if i ever need them
-
++ Ideas/Features to add if i ever need them:
 1)If a makefile already exists on the current directory, the program will ask
 if the user wants to edit the existing one or make a new one ( add the ability 
 to parse an already existing makefile)
