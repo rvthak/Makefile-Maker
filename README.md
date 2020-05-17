@@ -11,8 +11,8 @@ Argument  | Correct input format |   Argument Meaning    |  Argument type  | Def
    -c     |       -c g++         |       compiler        |     string      |      g++
    -db    |       -db            |      gdb toggle       |     string      |     false
    -vg    |       -vg            |    valgrind toggle    |     string      |     false
-   -p     |       -p             |  compilation argument |     string      |     false
-   -e     |       -e             |   execution argument  |     string      |     false
+   -p     |       -p             |  compilation argument toggle|     string      |     false
+   -e     |       -e             |   execution argument  toggle|     string      |     false
    --help |       --help
 
 ## Installation:
