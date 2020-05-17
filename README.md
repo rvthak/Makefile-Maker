@@ -3,16 +3,16 @@ A small simple program that creates simple makefiles automatically
 
 ## Argument list:
 
-Argument  | Correct input format |  Parameter type  | Default value 
-----------|----------------------|------------------|---------------
-   -n     |       -n name        |      string      |     a.out
-   -f     |       -f cpp         |      string      |      cpp
-   -h     |       -h hpp         |      string      |      hpp
-   -c     |       -c g++         |      string      |      g++
-   -db    |       -db            |      boolean     |     false
-   -vg    |       -vg            |      boolean     |     false
-   -p     |       -p             |      boolean     |     false
-   -e     |       -e             |      boolean     |     false
+Argument  | Correct input format |   Argument Meaning    |  Argument type  | Default value 
+----------|----------------------|-----------------------|-----------------|---------------
+   -n     |       -n name        |         name          |     string      |     a.out
+   -f     |       -f cpp         |  source files format  |     string      |      cpp
+   -h     |       -h hpp         |  header files format  |     string      |      hpp
+   -c     |       -c g++         |       compiler        |     string      |      g++
+   -db    |       -db            |      gdb toggle       |     string      |     false
+   -vg    |       -vg            |    valgrind toggle    |     string      |     false
+   -p     |       -p             |  compilation argument |     string      |     false
+   -e     |       -e             |   execution argument  |     string      |     false
    --help |       --help
 
 ## Installation:
