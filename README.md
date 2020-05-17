@@ -13,10 +13,9 @@ Argument  | Correct input format |  Parameter type  | Default value
    -vg    |       -vg            |      boolean     |     false
    -p     |       -p             |      boolean     |     false
    -e     |       -e             |      boolean     |     false
-   -org   |       -org           |      boolean     |     false (! -org NOT yet implemented !)
    --help |       --help
 
-+ Installation:
+## Installation:
 1) Download zip and unzip or git clone
 2) In Terminal: cd into the project directory
 3) In Terminal: make install
