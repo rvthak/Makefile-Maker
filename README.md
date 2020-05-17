@@ -12,7 +12,7 @@ A small simple program that creates simple makefiles automatically
 6)    -vg    |       -vg            |      boolean     |     false
 7)    -p     |       -p             |      boolean     |     false
 8)    -e     |       -e             |      boolean     |     false
-9)    -org   |       -org           |      boolean     |     false
+9)    -org   |       -org           |      boolean     |     false (! -org NOT yet implemented !)
 10)   --help |       --help
 
 
@@ -36,6 +36,19 @@ in ./bin ( final executable + makefile will stay in the parent directory)
 ! Disclaimer ! To mess with the parameters, some basic programming knowledge is 
 advised. This program was developed for pesonal use, so if configured 
 incorrectly it will not work.
+
++ Dev list:
+1) Change the final executable name to mfmk for simplicity
+2) Turn the final release into a .deb package to make installation easier
+and make the program executable from any directory if possible
+
++ Ideas/Features to add if i ever need them
+1)If a makefile already exists on the current directory, the program will ask
+if the user wants to edit the existing one or make a new one ( add the ability 
+to parse an already existing makefile)
+2) Implement "-org"
+3) When the program runs always check if make + the selected compiler are
+installed in the system
 
 + Created  v0.1 13/03/2019
 + Updated  v0.2 29/03/2019
