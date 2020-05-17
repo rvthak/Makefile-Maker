@@ -15,12 +15,19 @@ Argument  | Correct input format |  Parameter type  | Default value
    -e     |       -e             |      boolean     |     false
    --help |       --help
 
-## Installation: (you will need terminal)
+## Installation:
 1) Download zip and unzip or git clone
 2) cd into the project directory
 3) make install
 4) You will be asked your admin privileges password to complete the installation
 5) Delete the downloaded folder
+
+### Installation Example:
++ (In terminal)
+git clone https://github.com/rvthak/Makefile-Maker.git
+cd Makefile
+make install
+
 
 + Parameter description and functionality:
 1) (-n)		Set the name of the final executable 
