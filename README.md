@@ -25,9 +25,11 @@ Argument  | Correct input format |  Parameter type  | Default value
 ### Installation Example:
 + (In terminal)
 git clone https://github.com/rvthak/Makefile-Maker.git
-cd Makefile
+cd Makefile-Maker
 make install
-
+(program installation asks for your password and finishes)
+cd ..
+rm -rf Makefile-Maker/^C
 
 + Parameter description and functionality:
 1) (-n)		Set the name of the final executable 
