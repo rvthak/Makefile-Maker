@@ -23,12 +23,12 @@ Argument  | Correct input format |  Parameter type  | Default value
 5) Delete the downloaded folder
 
 ### Installation Example: (In terminal)
-git clone https://github.com/rvthak/Makefile-Maker.git
-cd Makefile-Maker
-make install
-(program installation asks for your password and finishes)
-cd ..
-rm -rf Makefile-Maker/^C
+    git clone https://github.com/rvthak/Makefile-Maker.git
+    cd Makefile-Maker
+    make install
+    (program installation asks for your password and finishes)
+    cd ..
+    rm -rf Makefile-Maker/^C
 
 + Parameter description and functionality:
 1) (-n)		Set the name of the final executable 
