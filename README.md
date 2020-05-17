@@ -13,7 +13,7 @@ Argument  | Correct input format |   Argument Meaning    |  Argument type  | Def
    -vg    |       -vg            |    valgrind toggle    |     string      |     false
    -p     |       -p             |  compilation argument toggle|     string      |     false
    -e     |       -e             |   execution argument  toggle|     string      |     false
-   --help |       --help
+   --help |       --help         |    Print Help
 
 ## Installation:
 1) Download zip and unzip or git clone
