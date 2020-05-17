@@ -1,9 +1,9 @@
 # Makefile-Maker 
 A small simple program that creates simple makefiles automatically
 
-### Parameters:
+## Argument list:
 
-Parameter | Correct input format |  Parameter type  | Default value 
+Argument  | Correct input format |  Parameter type  | Default value 
 ----------|----------------------|------------------|---------------
    -n     |       -n name        |      string      |     a.out
    -f     |       -f cpp         |      string      |      cpp
