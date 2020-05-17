@@ -1,7 +1,7 @@
 # Makefile-Maker 
 A small simple program that creates simple makefiles automatically
 
-+ Parameters:
+# Parameters:
 
 Parameter | Correct input format |  Parameter type  | Default value 
 ----------|----------------------|------------------|---------------
