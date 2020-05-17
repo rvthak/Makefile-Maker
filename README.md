@@ -15,6 +15,12 @@ A small simple program that creates simple makefiles automatically
 9)    -org   |       -org           |      boolean     |     false (! -org NOT yet implemented !)
 10)   --help |       --help
 
++ Installation:
+1) Download zip and unzip or git clone
+2) In Terminal: cd into the project directory
+3) In Terminal: make install
+4) You will be asked your admin privileges password to complete the installation
+5) Delete the downloaded folder
 
 + Parameter description and functionality:
 1) (-n)		Set the name of the final executable 
@@ -38,9 +44,7 @@ advised. This program was developed for pesonal use, so if configured
 incorrectly it will not work.
 
 + Dev list:
-1) Change the final executable name to mfmk for simplicity
-2) Turn the final release into a .deb package to make installation easier
-and make the program executable from any directory if possible
+1) Add -i toggle argument to enable/disable make install option
 
 + Ideas/Features to add if i ever need them:
 1) If a makefile already exists on the current directory, the program will ask
