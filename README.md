@@ -28,7 +28,7 @@ Argument  | Correct input format |  Parameter type  | Default value
     make install
     #(program installation asks for your password and finishes)
     cd ..
-    rm -rf Makefile-Maker/^C
+    rm -rf Makefile-Maker/
 
 + Parameter description and functionality:
 1) (-n)		Set the name of the final executable 
