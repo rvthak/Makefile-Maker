@@ -5,14 +5,14 @@ A small simple program that creates simple makefiles automatically
 
 Argument  | Correct input format |   Argument Meaning    |  Argument type  | Default value 
 ----------|----------------------|-----------------------|-----------------|---------------
-   -n     |       -n name        |         name          |     string      |     a.out
-   -f     |       -f cpp         |  source files format  |     string      |      cpp
-   -h     |       -h hpp         |  header files format  |     string      |      hpp
-   -c     |       -c g++         |       compiler        |     string      |      g++
+   -n     |       -n name        |         Name          |     string      |     a.out
+   -f     |       -f cpp         |  Source files format  |     string      |      cpp
+   -h     |       -h hpp         |  Header files format  |     string      |      hpp
+   -c     |       -c g++         |       Compiler        |     string      |      g++
    -db    |       -db            |      gdb toggle       |     string      |     false
    -vg    |       -vg            |    valgrind toggle    |     string      |     false
-   -p     |       -p             |  compilation argument toggle|     string      |     false
-   -e     |       -e             |   execution argument  toggle|     string      |     false
+   -p     |       -p             |  Compilation argument toggle|     string      |     false
+   -e     |       -e             |   Execution argument  toggle|     string      |     false
    --help |       --help         |    Print Help
 
 ## Installation:
