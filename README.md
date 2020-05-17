@@ -22,8 +22,7 @@ Argument  | Correct input format |  Parameter type  | Default value
 4) You will be asked your admin privileges password to complete the installation
 5) Delete the downloaded folder
 
-### Installation Example:
-+ (In terminal)
+### Installation Example: (In terminal)
 git clone https://github.com/rvthak/Makefile-Maker.git
 cd Makefile-Maker
 make install
