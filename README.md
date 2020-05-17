@@ -47,7 +47,7 @@ in ./bin ( final executable + makefile will stay in the parent directory)
 (! -org NOT yet implemented !)
 10) ( --help)  Terminates Program and Prints Help
 
-! Disclaimer ! To mess with the parameters, some basic programming knowledge is 
+! __Important Note__ ! To mess with the parameters, some basic programming knowledge is 
 advised. This program was developed for pesonal use, so if configured 
 incorrectly it will not work.
 
