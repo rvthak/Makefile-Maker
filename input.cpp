@@ -191,12 +191,12 @@ void SystemInput(Makefile &mk){
 	// Get the files found in a temporary file
 	string str="find *.";
 	str+=mk.getFormat();
-	str+=">mkfl.tmp";
+	str+=">/tmp/mkfl.tmp";
 	system(str.c_str());
 
 	// Safely open tmp file
 	ifstream file;
-	file.open("mkfl.tmp");
+	file.open("/tmp/mkfl.tmp");
 	if(!file.is_open()){ cout << " Fatal Error: Failed to read files" <<endl; exit(1); }
 
 	// Print available files if any
@@ -245,7 +245,7 @@ void SystemInput(Makefile &mk){
 
 	// Close and delete the tmp file
 	file.close();
-	system("rm -f mkfl.tmp");
+	system("rm -f /tmp/mkfl.tmp");
 	return;
 }
 
