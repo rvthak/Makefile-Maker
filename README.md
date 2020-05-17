@@ -1,5 +1,5 @@
 # Makefile-Maker 
-A small simple program that creates simple makefiles automatically
+A simple, quick and easy way to automatically create basic makefiles for small projects
 
 ## Argument list:
 
@@ -33,10 +33,10 @@ Argument  | Correct input format |   Argument Meaning    |  Argument type  | Def
 ## Parameter description and functionality:
 1) __(-n)__		Set the name of the final executable 
 2) __(-f)__		Set the format of the targeted source files
-3) __(-h)__     Set the format of the targeted header files
+3) __(-h)__    Set the format of the targeted header files
 4) __(-c)__		Set the compiler of choice
 5) __(-db)__ 	Enable debugging on the final makefile
-6) __(-vg)__	   Enable valgrind on the final makefile
+6) __(-vg)__	Enable valgrind on the final makefile
 7) __(-p)__		Enables compiler parameter mode. The program will later ask the user to
 type-in any needed parameters 
 8) __(-e)__		Enables execution parameter mode. The program will later ask the user to
