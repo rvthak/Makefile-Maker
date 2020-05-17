@@ -30,7 +30,7 @@ Argument  | Correct input format |  Parameter type  | Default value
     cd ..
     rm -rf Makefile-Maker/
 
-+ Parameter description and functionality:
+## Parameter description and functionality:
 1) (-n)		Set the name of the final executable 
 2) (-f)		Set the format of the targeted source files
 3) (-h)     Set the format of the targeted header files
