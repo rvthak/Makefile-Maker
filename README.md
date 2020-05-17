@@ -31,21 +31,21 @@ Argument  | Correct input format |  Parameter type  | Default value
     rm -rf Makefile-Maker/
 
 ## Parameter description and functionality:
-1) (-n)		Set the name of the final executable 
-2) (-f)		Set the format of the targeted source files
-3) (-h)     Set the format of the targeted header files
-4) (-c)		Set the compiler of choice
-5) (-db) 	Enable debugging on the final makefile
-6) (-vg)	   Enable valgrind on the final makefile
-7) (-p)		Enables compiler parameter mode. The program will later ask the user to
+1) __(-n)__		Set the name of the final executable 
+2) __(-f)__		Set the format of the targeted source files
+3) __(-h)__     Set the format of the targeted header files
+4) __(-c)__		Set the compiler of choice
+5) __(-db)__ 	Enable debugging on the final makefile
+6) __(-vg)__	   Enable valgrind on the final makefile
+7) __(-p)__		Enables compiler parameter mode. The program will later ask the user to
 type-in any needed parameters 
-8) (-e)		Enables execution parameter mode. The program will later ask the user to
+8) __(-e)__		Enables execution parameter mode. The program will later ask the user to
 type-in any needed parameters
-9) (-org)	The system will organise all selected files in folders
+9) __(-org)__	The system will organise all selected files in folders
 source files in ./source, header files in ./include and object files
 in ./bin ( final executable + makefile will stay in the parent directory)
 (! -org NOT yet implemented !)
-10) ( --help)  Terminates Program and Prints Help
+10) __( --help)__  Terminates Program and Prints Help
 
 ! __Important Note__ ! To mess with the parameters, some basic programming knowledge is 
 advised. This program was developed for pesonal use, so if configured 
