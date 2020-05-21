@@ -1,6 +1,4 @@
 # Makefile-Maker 
-A simple, quick and easy way to automatically create basic makefiles for small projects.
-
 ( At the moment, it works on small projects that have all their files in a single directory )
 
 ## Argument list:
