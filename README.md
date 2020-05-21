@@ -49,7 +49,7 @@ type-in any needed parameters
 source files in ./source, header files in ./include and object files
 in ./bin ( final executable + makefile will stay in the parent directory)
 **(! -org NOT yet implemented !)**
-11) __( --help)__  Prints Help
+11) __(--help)__  Prints Help
 12) __(--version)__ Prints current version
 
 ! __Important Note__ ! To mess with the parameters, some basic programming knowledge is 
