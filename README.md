@@ -3,7 +3,7 @@
 
 ## Argument list:
 
-Argument  | Correct input format |   Argument Meaning    |  Argument type  | Default value 
+Argument  |     Correct Usage    |   Argument Meaning    |  Argument type  | Default value 
 ----------|----------------------|-----------------------|-----------------|---------------
    -n     |       -n name        |         Name          |     string      |     a.out
    -f     |       -f cpp         |  Source files format  |     string      |      cpp
