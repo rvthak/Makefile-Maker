@@ -40,7 +40,7 @@ Argument  |     Correct Usage    |   Argument Meaning    |  Argument type  | Def
 4) __(-c)__		Set the compiler of choice
 5) __(-db)__ 	Toggle debugging
 6) __(-vg)__	Toggle valgrind
-7) __(-i)__    Toggle make install 
+7) __(-i)__    Toggle make install **(! -i NOT yet added !)**
 8) __(-p)__		Toggle compiler parameter mode. The program will later ask the user to
 type-in any needed parameters 
 9) __(-e)__		Toggle execution parameter mode. The program will later ask the user to
@@ -50,7 +50,7 @@ source files in ./source, header files in ./include and object files
 in ./bin ( final executable + makefile will stay in the parent directory)
 **(! -org NOT yet implemented !)**
 11) __(--help)__  Prints Help
-12) __(--version)__ Prints current version
+12) __(--version)__ Prints current version**(! --version NOT yet added !)**
 
 ! __Important Note__ ! To mess with the parameters, some basic programming knowledge is 
 advised. This program was developed for pesonal use, so if configured 
