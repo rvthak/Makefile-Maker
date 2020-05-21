@@ -9,11 +9,13 @@ Argument  | Correct input format |   Argument Meaning    |  Argument type  | Def
    -f     |       -f cpp         |  Source files format  |     string      |      cpp
    -h     |       -h hpp         |  Header files format  |     string      |      hpp
    -c     |       -c g++         |       Compiler        |     string      |      g++
-   -db    |       -db            |      gdb toggle       |     string      |     true
-   -vg    |       -vg            |    valgrind toggle    |     string      |     true
-   -p     |       -p             |  Compilation argument toggle|     string      |     false
-   -e     |       -e             |   Execution argument  toggle|     string      |     false
+   -db    |       -db            |      gdb toggle       |     boolean     |     true
+   -vg    |       -vg            |    valgrind toggle    |     boolean     |     true
+   -i     |       -i             |   make install toggle       |     boolean     |     true
+   -p     |       -p             |  Compilation argument toggle|     boolean     |     false
+   -e     |       -e             |   Execution argument  toggle|     boolean     |     false
    --help |       --help         |    Print Help
+   --version|     --version      |    Print Version
 
 ## Installation:
 1) Download zip and unzip or git clone
@@ -36,17 +38,19 @@ Argument  | Correct input format |   Argument Meaning    |  Argument type  | Def
 2) __(-f)__		Set the format of the targeted source files
 3) __(-h)__    Set the format of the targeted header files
 4) __(-c)__		Set the compiler of choice
-5) __(-db)__ 	Enable debugging on the final makefile
-6) __(-vg)__	Enable valgrind on the final makefile
-7) __(-p)__		Enables compiler parameter mode. The program will later ask the user to
+5) __(-db)__ 	Toggle debugging
+6) __(-vg)__	Toggle valgrind
+7) __(-i)__    Toggle make install 
+8) __(-p)__		Toggle compiler parameter mode. The program will later ask the user to
 type-in any needed parameters 
-8) __(-e)__		Enables execution parameter mode. The program will later ask the user to
+9) __(-e)__		Toggle execution parameter mode. The program will later ask the user to
 type-in any needed parameters
-9) __(-org)__	The system will organise all selected files in folders
+10) __(-org)__	The system will organise all selected files in folders
 source files in ./source, header files in ./include and object files
 in ./bin ( final executable + makefile will stay in the parent directory)
 **(! -org NOT yet implemented !)**
-10) __( --help)__  Terminates Program and Prints Help
+11) __( --help)__  Prints Help
+12) __(--version)__ Prints current version
 
 ! __Important Note__ ! To mess with the parameters, some basic programming knowledge is 
 advised. This program was developed for pesonal use, so if configured 
