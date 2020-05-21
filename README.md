@@ -1,5 +1,6 @@
 # Makefile-Maker 
-A simple, quick and easy way to automatically create basic makefiles for small projects
+A simple, quick and easy way to automatically create basic makefiles for small projects.
+At the moment, it works on small projects that have all their files in a single directory.
 
 ## Argument list:
 
@@ -21,6 +22,7 @@ Argument  | Correct input format |   Argument Meaning    |  Argument type  | Def
 3) make install
 4) You will be asked your admin privileges password to complete the installation
 5) Delete the downloaded folder
+6) You can now run the program from your project's directory with: mkfl
 
 ### Installation Example: (In terminal)
     git clone https://github.com/rvthak/Makefile-Maker.git
