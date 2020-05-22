@@ -46,10 +46,8 @@ to parse an already existing makefile)
 2) Implement "-org" The system will organise all selected files in folders
 source files in ./source, header files in ./include and object files
 in ./bin ( final executable + makefile will stay in the parent directory)
-3) When the program runs always check if make + the selected compiler are
-installed in the system
-4) Add -i toggle argument to enable/disable make install option
-5) Add a --version argument
+3) Add -i toggle argument to enable/disable make install option
+4) Add a --version argument
 
 + Created  v0.1 13/03/2019
 + Updated  v0.2 29/03/2019
