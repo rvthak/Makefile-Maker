@@ -17,7 +17,7 @@ Argument  |     Correct Usage    |   Argument Meaning    |  Argument type  | Def
    --help |       --help         |    Print Help
    --version|     --version      |    Print Version
 
-  __(Compilation/Execution toggle will ask the user for the parameters later)__
+  (Compilation/Execution toggle will ask the user for the parameters later)
 
 ## Installation:
 1) Download zip and unzip or git clone
