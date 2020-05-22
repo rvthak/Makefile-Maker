@@ -16,6 +16,7 @@ Argument  |     Correct Usage    |   Argument Meaning    |  Argument type  | Def
    -e     |       -e             |   Execution argument  toggle|     boolean     |     false
    --help |       --help         |    Print Help
    --version|     --version      |    Print Version
+   ---------------------------------------------------------------------------------------
    ( The Compilation/Execution toggle will ask the user for the parameters later )
 
 ## Installation:
