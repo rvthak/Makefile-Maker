@@ -33,25 +33,6 @@ Argument  |     Correct Usage    |   Argument Meaning    |  Argument type  | Def
     cd ..
     rm -rf Makefile-Maker/
 
-## Parameter description and functionality:
-1) __(-n)__		Set the name of the final executable 
-2) __(-f)__		Set the format of the targeted source files
-3) __(-h)__    Set the format of the targeted header files
-4) __(-c)__		Set the compiler of choice
-5) __(-db)__ 	Toggle debugging
-6) __(-vg)__	Toggle valgrind
-7) __(-i)__    Toggle make install **(! -i NOT yet added !)**
-8) __(-p)__		Toggle compiler parameter mode. The program will later ask the user to
-type-in any needed parameters 
-9) __(-e)__		Toggle execution parameter mode. The program will later ask the user to
-type-in any needed parameters
-10) __(-org)__	The system will organise all selected files in folders
-source files in ./source, header files in ./include and object files
-in ./bin ( final executable + makefile will stay in the parent directory)
-**(! -org NOT yet implemented !)**
-11) __(--help)__  Prints Help
-12) __(--version)__ Prints current version**(! --version NOT yet added !)**
-
 ! __Important Note__ ! To mess with the parameters, some basic programming knowledge is 
 advised. This program was developed for pesonal use, so if configured 
 incorrectly it will not work.
@@ -60,7 +41,9 @@ incorrectly it will not work.
 1) If a makefile already exists on the current directory, the program will ask
 if the user wants to edit the existing one or make a new one ( add the ability 
 to parse an already existing makefile)
-2) Implement "-org"
+2) Implement "-org" The system will organise all selected files in folders
+source files in ./source, header files in ./include and object files
+in ./bin ( final executable + makefile will stay in the parent directory)
 3) When the program runs always check if make + the selected compiler are
 installed in the system
 4) Add -i toggle argument to enable/disable make install option
