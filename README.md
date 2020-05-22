@@ -5,10 +5,10 @@
 
 Argument  |     Correct Usage    |   Argument Meaning    |  Argument type  | Default value 
 ----------|----------------------|-----------------------|-----------------|---------------
-   -n     |       -n name        |         Name          |     string      |     a.out
-   -f     |       -f cpp         |  Source files format  |     string      |      cpp
-   -h     |       -h hpp         |  Header files format  |     string      |      hpp
-   -c     |       -c g++         |       Compiler        |     string      |      g++
+   -n     |       -n name        |        Set name          |     string      |     a.out
+   -f     |       -f cpp         |  Set source files format  |     string      |      cpp
+   -h     |       -h hpp         |  Set header files format  |     string      |      hpp
+   -c     |       -c g++         |      Set compiler        |     string      |      g++
    -db    |       -db            |      gdb toggle       |     boolean     |     true
    -vg    |       -vg            |    valgrind toggle    |     boolean     |     true
    -i     |       -i             |   make install toggle       |     boolean     |     true
