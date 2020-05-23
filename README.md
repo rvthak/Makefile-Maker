@@ -18,6 +18,9 @@ Argument  |     Correct Usage    |   Argument Meaning    |  Argument type  | Def
    --version|     --version      |    Print Version
 
   (Compilation/Execution toggle will ask the user for the parameters later)
+  
+  ! __Important Note__ ! To mess with the parameters, some basic programming knowledge is 
+advised. This program was developed for pesonal use.
 
 ## Installation:
 1) Download zip and unzip or git clone
@@ -34,10 +37,6 @@ Argument  |     Correct Usage    |   Argument Meaning    |  Argument type  | Def
     #(program installation asks for your password and finishes)
     cd ..
     rm -rf Makefile-Maker/
-
-! __Important Note__ ! To mess with the parameters, some basic programming knowledge is 
-advised. This program was developed for pesonal use, so if configured 
-incorrectly it will not work.
 
 ## Ideas/Features to add if i ever need them:
 1) If a makefile already exists on the current directory, the program will ask
