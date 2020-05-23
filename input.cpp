@@ -14,16 +14,21 @@ using namespace std;
 #define COMP_A "-c"
 #define DEBG_A "-db"
 #define VALG_A "-vg"
+#define INST_A "-i"
 #define PARM_A "-p"
 #define EXEC_A "-e"
 #define ORGN_A "-org"
 #define HELP_A "--help"
+#define VERS_A "--version"
+
+#define VERSION "v1.0"
+
 
 // Support Functions - Keep them local
 int HandleParameter(int &count, int &argc, char const **argv, Makefile &mk); // Gets a parameter and updates the Makefile (Used only from InputManager())
 void changeFormat(string &str, const string frm); 	// Change the str String file format to frm
 bool getDesision(const string msg); 				// Print the msg question and return a binary answer
-
+void printVersion(void); 							// Print program Version
 
 void InputManager(int argc, char const **argv, Makefile &mk){
 
@@ -68,6 +73,10 @@ int HandleParameter(int &count, int &argc, char const **argv, Makefile &mk){
 
 	if(!param.compare(HELP_A)){
 		printInputFormat();
+		return 1;
+	}
+	else if(!param.compare(VERS_A)){
+		printVersion();
 		return 1;
 	}
 	else if(!param.compare(NAME_A)){
@@ -128,6 +137,17 @@ int HandleParameter(int &count, int &argc, char const **argv, Makefile &mk){
 		}
 		count++;
 	}
+
+	else if(!param.compare(INST_A)){
+		if(mk.getInstall()){
+			mk.setInstall(0);
+		}
+		else{
+			mk.setInstall(1);
+		}
+		count++;
+	}
+
 	else if(!param.compare(PARM_A)){
 		if(mk.getCompParam()){
 			mk.setCompParam(0);
@@ -281,4 +301,8 @@ void changeFormat(string &str, const string frm){
 	int len=str.length() - pos;
 	str.erase(pos+1, len);
 	str+=frm;
+}
+
+void printVersion(void){
+	cout << " Makefile Maker " << VERSION << endl;
 }

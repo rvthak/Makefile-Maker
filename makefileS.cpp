@@ -10,6 +10,7 @@ using namespace std;
 #define COMP "g++"
 #define DEBG 1
 #define VALG 1
+#define INST 1
 #define PARM 0
 #define EXEC 0
 #define ORGN 0
@@ -22,6 +23,7 @@ Makefile::Makefile(){
 	HeaderFormat=HEAD;
 	debugEnable=DEBG;
 	valgrindEnable=VALG;
+	installEnable=INST;
 	parameterEnable=PARM;
 	execParamEnable=EXEC;
 	organizeEnable=ORGN;
@@ -34,6 +36,7 @@ Makefile::Makefile(const Makefile &mkfl){
 	HeaderFormat=mkfl.HeaderFormat;
 	debugEnable=mkfl.debugEnable;
 	valgrindEnable=mkfl.valgrindEnable;
+	installEnable=mkfl.installEnable;
 	parameterEnable=mkfl.parameterEnable;
 	execParamEnable=mkfl.execParamEnable;
 	organizeEnable=mkfl.organizeEnable;
@@ -45,6 +48,7 @@ std::string Makefile::getFormat(void)const{ return SourceFormat; }
 std::string Makefile::getHeader(void)const{ return HeaderFormat; }
 bool Makefile::getDebug(void)const{ return debugEnable; }
 bool Makefile::getValgrind(void)const{ return valgrindEnable; }
+bool Makefile::getInstall(void)const{ return installEnable; }
 bool Makefile::getCompParam(void)const{ return parameterEnable; }
 bool Makefile::getExecParam(void)const{ return execParamEnable; }
 bool Makefile::getOrganize(void)const{ return organizeEnable; }
@@ -58,6 +62,7 @@ void Makefile::setFormat(const std::string &format){ SourceFormat=format; }
 void Makefile::setHeader(const std::string &format){ HeaderFormat=format; }
 void Makefile::setDebug(const bool &db){ debugEnable=db; }
 void Makefile::setValgrind(const bool &vg){ valgrindEnable=vg; }
+void Makefile::setInstall(const bool &inst){ installEnable=inst; }
 void Makefile::setCompParam(const bool &param){ parameterEnable=param; }
 void Makefile::setExecParam(const bool &param){ execParamEnable=param; }
 void Makefile::setOrganize(const bool &org){ organizeEnable=org; }
@@ -81,7 +86,7 @@ void Makefile::print(void)const{
 	}
 	cout << " organizeEnable:  " << organizeEnable << endl;
 	cout << " File List: " << FileList << endl;
-} 
+}
 
 void Makefile::readCompParam(void){
 	cout << " > Type the Compilation parameters and press enter: " << endl;
@@ -92,3 +97,4 @@ void Makefile::readExecParam(void){
 	cout << " > Type the Execution parameters and press enter: " << endl;
 	cin >> ExecParameters;
 }
+

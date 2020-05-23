@@ -44,7 +44,9 @@ void Output(Makefile &mk){
 	// Write Body + any other part
 	file << mkflBody();
 
-	file << mkflInst();
+	if(mk.getInstall()){
+		file << mkflInst();
+	}
 
 	if(mk.getDebug()){
 		file << mkflDB();
