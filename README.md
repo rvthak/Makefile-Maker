@@ -1,4 +1,7 @@
 # Makefile-Maker 
+
+**Important** It is recommended that you use the "theOneMakefile" repository instead [https://github.com/rvthak/theOneMakefile]
+
 ( At the moment, it works on small projects that have all their files in a single directory )
 
 ## Argument list:
